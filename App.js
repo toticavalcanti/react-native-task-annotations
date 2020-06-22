@@ -34,10 +34,10 @@ class App extends React.Component{
 
   render(){
     return(
-    <View style = {style.viewStyle}>
-      <Text>Olá native!!!</Text>
+    <View style = {styles.viewStyle}>
+      <Text style = {styles.header} >Anotações de Tarefas</Text>
       <TextInput 
-        style = {style.inputStyle}
+        style = {styles.inputStyle}
         onChangeText = {(text) => this.setState({text})}
         value = {this.state.text}
       />
@@ -52,11 +52,18 @@ class App extends React.Component{
   }
 }
 
-const style = {
+const styles = {
+  header: {
+    fontSize: 30,
+    color: 'green',
+    fontWeight: 'bold',
+  },
+
   viewStyle: {
     flex: 1, 
     alignItems: 'center', 
-    justifyContent: 'center'
+    justifyContent: 'center',
+    margin: 10
   }, 
 
   inputStyle: {
