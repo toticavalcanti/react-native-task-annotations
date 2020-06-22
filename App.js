@@ -1,13 +1,16 @@
 import React from 'react';
-import {Text, TextInput, View } from 'react-native';
+import {Text, TextInput, View, Button } from 'react-native';
 
 class App extends React.Component{
   render(){
     return(
-    <View style={style.viewStyle}>
+    <View style = {style.viewStyle}>
       <Text>Olá native!!!</Text>
       <TextInput 
-        style={style.inputStyle}
+        style = {style.inputStyle}
+      />
+      <Button 
+        title = "Texto do botao"
       />
     </View>
     )
