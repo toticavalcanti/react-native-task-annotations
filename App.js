@@ -42,7 +42,7 @@ class App extends React.Component{
         value = {this.state.text}
       />
       <Button 
-        title = "Para fazer"
+        title = "Adicionar tarefa"
         color = "green"
         onPress = {this.addTodo}
       />
