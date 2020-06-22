@@ -3,11 +3,14 @@ import {Text, TextInput, View, Button } from 'react-native';
 
 class App extends React.Component{
   state = {
-    text: "Essa é a mensagem na tela",
-    todo: ["Aprendendo React", "Aprendendo React Native", "Construindo Apps"]
+    text: "",
+    todo: []
   }
   addTodo = () => {
-    this.setState({todo: this.state.text})
+    let newTodo = this.state.text;
+    let arr = this.state.todo;
+    arr.push(newTodo);
+    this.setState({todo: arr, text: ""});
   }
 
   renderTodos = () => {
@@ -25,9 +28,10 @@ class App extends React.Component{
       <TextInput 
         style = {style.inputStyle}
         onChangeText = {(text) => this.setState({text})}
+        value = {this.state.text}
       />
       <Button 
-        title = "Meu botão"
+        title = "Para fazer:"
         color = "green"
         onPress = {this.addTodo}
       />
