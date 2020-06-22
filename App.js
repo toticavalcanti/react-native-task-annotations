@@ -2,16 +2,22 @@ import React from 'react';
 import {Text, TextInput, View, Button } from 'react-native';
 
 class App extends React.Component{
+  state = {
+    todo: "Essa é a mensagem na tela"
+  }
   render(){
     return(
     <View style = {style.viewStyle}>
       <Text>Olá native!!!</Text>
       <TextInput 
         style = {style.inputStyle}
+        onChangeText = {(text) => this.setState({todo: text})}
       />
       <Button 
-        title = "Texto do botao"
+        title = "Meu botão"
+        color = "green"
       />
+      <Text>{this.state.todo}</Text>
     </View>
     )
   }
