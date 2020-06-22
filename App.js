@@ -4,10 +4,18 @@ import {Text, TextInput, View, Button } from 'react-native';
 class App extends React.Component{
   state = {
     text: "Essa é a mensagem na tela",
-    todo: ""
+    todo: ["Aprendendo React", "Aprendendo React Native", "Construindo Apps"]
   }
   addTodo = () => {
     this.setState({todo: this.state.text})
+  }
+
+  renderTodos = () => {
+    return this.state.todo.map( t => {
+      return (
+        <Text key = {t}>{t}</Text>
+      )
+    })
   }
 
   render(){
@@ -23,7 +31,7 @@ class App extends React.Component{
         color = "green"
         onPress = {this.addTodo}
       />
-      <Text>{this.state.todo}</Text>
+      {this.renderTodos()}
     </View>
     )
   }
