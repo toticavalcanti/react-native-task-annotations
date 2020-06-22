@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Toti, você é um dev muito fodaaaaaa!!!!!!!</Text>
+      <Text>Testando react native</Text>
     </View>
   );
 }
