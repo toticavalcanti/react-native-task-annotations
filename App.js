@@ -34,25 +34,32 @@ class App extends React.Component{
 
   render(){
     return(
-    <View style = {styles.viewStyle}>
-      <Text style = {styles.header} >Anotações de Tarefas</Text>
-      <TextInput 
-        style = {styles.inputStyle}
-        onChangeText = {(text) => this.setState({text})}
-        value = {this.state.text}
-      />
-      <Button 
-        title = "Adicionar tarefa"
-        color = "green"
-        onPress = {this.addTodo}
-      />
-      {this.renderTodos()}
-    </View>
+      <View style = {styles.wholeStyle}>
+        <View style = {styles.viewStyle}>
+          <Text style = {styles.header} >Anotações de Tarefas</Text>
+          <TextInput 
+            style = {styles.inputStyle}
+            onChangeText = {(text) => this.setState({text})}
+            value = {this.state.text}
+          />
+          <Button 
+            title = "Adicionar tarefa"
+            color = "green"
+            onPress = {this.addTodo}
+          />
+          {this.renderTodos()}
+        </View>
+      </View>
     )
   }
 }
 
 const styles = {
+  wholeStyle: {
+    backgroundColor: "#B3E5FC",
+    flex: 1
+  },
+
   header: {
     fontSize: 30,
     color: 'green',
@@ -63,7 +70,7 @@ const styles = {
     marginTop: 30,
     alignItems: 'center', 
     justifyContent: 'center',
-    margin: 10
+    margin: 10,
   }, 
 
   inputStyle: {
