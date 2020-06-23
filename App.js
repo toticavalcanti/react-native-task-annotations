@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, TextInput, View, Button } from 'react-native';
+import {Text, TextInput, View, Button, TouchableOpacity } from 'react-native';
 
 class App extends React.Component{
   state = {
@@ -24,10 +24,12 @@ class App extends React.Component{
   renderTodos = () => {
     return this.state.todo.map( t => {
       return (
+        <TouchableOpacity key = {t}>
         <Text 
-          key = {t}
+          style = {styles.todo}
           onPress = { () => (this.deleteTodo(t))  }
         >{t}</Text>
+        </TouchableOpacity>
       )
     })
   }
@@ -36,7 +38,7 @@ class App extends React.Component{
     return(
       <View style = {styles.wholeStyle}>
         <View style = {styles.viewStyle}>
-          <Text style = {styles.header} >Anotações de Tarefas</Text>
+          <Text style = {styles.header} >Tarefas</Text>
           <TextInput 
             style = {styles.inputStyle}
             onChangeText = {(text) => this.setState({text})}
@@ -44,7 +46,7 @@ class App extends React.Component{
           />
           <Button 
             title = "Adicionar tarefa"
-            color = "green"
+            color = "0288D1"
             onPress = {this.addTodo}
           />
           {this.renderTodos()}
@@ -56,13 +58,13 @@ class App extends React.Component{
 
 const styles = {
   wholeStyle: {
-    backgroundColor: "#B3E5FC",
+    backgroundColor: "#0288D1",
     flex: 1
   },
 
   header: {
     fontSize: 30,
-    color: 'green',
+    color: 'white',
     fontWeight: 'bold',
   },
 
@@ -76,8 +78,13 @@ const styles = {
   inputStyle: {
     height: 40,
     width: 300,
-    borderColor: "green",
+    borderColor: "white",
     borderWidth: 1
+  },
+
+  todo: {
+    fontSize: 24,
+    color: "white"
   }
 }
 
