@@ -79,7 +79,8 @@ const styles = {
     height: 40,
     width: 300,
     borderColor: "white",
-    borderWidth: 1
+    borderWidth: 1,
+    color: 'white'
   },
 
   todo: {
