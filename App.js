@@ -60,7 +60,7 @@ const styles = {
   },
 
   viewStyle: {
-    flex: 1, 
+    marginTop: 30,
     alignItems: 'center', 
     justifyContent: 'center',
     margin: 10
