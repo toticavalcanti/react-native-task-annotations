@@ -1,6 +1,6 @@
-# Task Anottation
+# Task Anottations
 
-This project is a simple app to task anottation, it is a process of learning react-native with expo, developer a simple application to get familiarized with this tecnology.
+This project is a simple app to task anottations, it is a process of learning react-native with expo, developer a simple application to get familiarized with this tecnology.
 
 **Stack**
 ---
